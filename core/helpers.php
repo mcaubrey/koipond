@@ -6,8 +6,12 @@
  * @param  string $target
  */
 
-function local($target)
+function local($target = false)
 {
+    if (!$target) {
+        return rtrim(getcwd() , 'public');
+    }
+    
 	$paths = [
 	    rtrim(getcwd() , 'public') . $target,
 	    rtrim(getcwd() , '/public') . $target,

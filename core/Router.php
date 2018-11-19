@@ -64,7 +64,7 @@ class Router
             );
         }
 
-        throw new Exception('No route defined for this URI.');
+        throw new \Exception('No route defined for this URI.');
     }
 
     /**
@@ -79,7 +79,7 @@ class Router
         $controller = new $controller;
 
         if (! method_exists($controller, $action)) {
-            throw new Exception(
+            throw new \Exception(
                 "{$controller} does not respond to the {$action} action."
             );
         }
